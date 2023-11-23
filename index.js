@@ -30,10 +30,15 @@ function displayWeather(data) {
     const windSpeedElement = document.getElementById('windSpeed');
 
     cityElement.textContent = `${data.name}, ${data.sys.country}`;
-    descriptionElement.textContent = data.weather[0].description;
+    descriptionElement.textContent = `Weather: ${data.weather[0].description}`;
     temperatureElement.textContent = `Temperature: ${data.main.temp} °C`;
     humidityElement.textContent = `Humidity: ${data.main.humidity}%`;
     windSpeedElement.textContent = `Wind Speed: ${data.wind.speed} m/s`;
 
     weatherInfo.classList.remove('hidden');
+}
+
+function dayNight () {
+    document.body.classList.toggle('dark-mode');
+        document.querySelector('.weather-container').classList.toggle('dark-mode');
 }

@@ -9,7 +9,9 @@ body {
     background-color: #f0f0f0;
     background-image: url('./images/sky.jpg');
 }
-
+#cityInput, .get {
+    font-size: 18px;
+}
 .img {
     position: relative;
     background-image: url('./images/weather-images.jpg');
@@ -32,14 +34,17 @@ font-weight: bold;
 
 .weather-container {
     text-align: center;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 8px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .search-container {
     margin-top: 20px;
+    font-size: 20px;
 }
 
 input {
@@ -62,4 +67,37 @@ button:hover {
 
 .hidden {
     display: none;
+}
+
+.dark-mode {
+    background-image: url('./images/nightt.jpg');
+    color: #ffffff;
+    background-size: cover; /* This property scales the background image to be as large as possible */
+.weather-container {
+    background-image: url('./images/skyy.jpg');
+        background-color: rgb(0, 0, 0);
+        }
+    }
+
+    .dayNight {
+           font-style: italic;
+           border-radius: 20px;
+           margin-left: 60px;
+    }
+
+@media screen and (max-width: 700px) {
+    body {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img {
+        position: relative;
+        height: 250px; 
+    width: 370px;
+    }
+    
+    .get {
+        margin: 20px;
+    }
 }
